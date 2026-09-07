@@ -111,6 +111,13 @@ self.addEventListener('fetch', (event) => {
  */
 self.addEventListener('message', (event) => {
   const daten = event.data;
+  // Nur auf ausdruecklichen Wunsch: Die wartende Fassung uebernimmt sofort.
+  // Ohne diesen Zuruf bleibt es dabei, dass eine neue Fassung erst nach dem
+  // vollstaendigen Schliessen greift - mitten im Aufmass will das niemand.
+  if (daten && daten.typ === 'sofort-uebernehmen') {
+    self.skipWaiting();
+    return;
+  }
   if (!daten || daten.typ !== 'dateien-sichern' || !Array.isArray(daten.urls)) return;
   event.waitUntil((async () => {
     let cache = null;
