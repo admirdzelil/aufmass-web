@@ -18,7 +18,7 @@
  *    trotzdem nachgeladen, solange eine Verbindung besteht.
  */
 
-const CACHE = 'aufmass-05bbedae';
+const CACHE = 'aufmass-12a0b8ad';
 const SHELL = ['/', '/index.html', '/manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
