@@ -1,0 +1,1 @@
+import{n as e}from"./lib-6-507b7f6a7f3e.js";var t,n=e((()=>{t=`/assets/emc-template-DcttbGyZ.xlsx`})),r,i=e((()=>{r=`/assets/ambl-template-CKvjt26q.xlsx`}));export{n as i,i as n,t as r,r as t};
